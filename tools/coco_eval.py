@@ -20,10 +20,8 @@ def main():
         nargs='+',
         default=[100, 300, 1000],
         help='proposal numbers, only used for recall evaluation')
-    parser.add_argument(
-        '--classwise', action='store_true', help='whether eval class wise ap')
     args = parser.parse_args()
-    coco_eval(args.result, args.types, args.ann, args.max_dets, args.classwise)
+    coco_eval(args.result, args.types, args.ann, args.max_dets)
 
 
 if __name__ == '__main__':
